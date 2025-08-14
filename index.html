@@ -2,68 +2,536 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>GlowVibe BD – Investor Deck</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,500,400|Poppins:400,600" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlowVibe BD - Business Plan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="deck">
-    <div class="title">GlowVibe BD</div>
-    <div class="subtitle">Empowering Moods – Premium Candles for Women & Celebrations</div>
-
-    <section>
-      <h2 class="sec-title">Brand Colors</h2>
-      <div class="brand-colors">
-        <div class="color-circle rose"></div>
-        <div class="color-circle lavender"></div>
-        <div class="color-circle mint"></div>
-        <div class="color-circle yellow"></div>
-        <div class="color-circle coral"></div>
-        <div class="color-circle ivory"></div>
+  <div class="deck-container">
+    <!-- Navigation -->
+    <div class="nav-header">
+      <div class="logo">GlowVibe BD</div>
+      <div class="slide-counter">
+        <span id="current-slide">1</span> / <span id="total-slides">12</span>
       </div>
-    </section>
+      <div class="nav-buttons">
+        <button onclick="prevSlide()" id="prev-btn">←</button>
+        <button onclick="nextSlide()" id="next-btn">→</button>
+      </div>
+    </div>
 
-    <section>
-      <h2 class="sec-title">Product Lines</h2>
-      <ul>
-        <li>Mood Candles: Calm, Joy, Romance, Empower</li>
-        <li>Events & Festives: Birthday, Eid, Boishakh, Puja</li>
-        <li>Personalized Gifts: Names, Zodiac, Empowerment</li>
-        <li>Wellness: Aromatherapy blends (Lavender, Citrus, Mint)</li>
-      </ul>
-    </section>
+    <!-- Slides -->
+    <div class="slides-container">
+      
+      <!-- Slide 1: Business Overview -->
+      <div class="slide active" id="slide-1">
+        <div class="slide-content title-slide">
+          <h1>GlowVibe BD</h1>
+          <h2>Premium Online Candle Business</h2>
+          <p class="subtitle">Facebook | Daraz | Instagram | Website Sales</p>
+          <div class="key-metrics">
+            <div class="metric-box">
+              <h3>Target Market</h3>
+              <p>Urban Women (18-45)</p>
+            </div>
+            <div class="metric-box">
+              <h3>Sales Channels</h3>
+              <p>100% Online</p>
+            </div>
+            <div class="metric-box">
+              <h3>Investment</h3>
+              <p>৳25 Lakhs</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <section>
-      <h2 class="sec-title">Market Opportunity</h2>
-      <canvas id="marketChart" width="340" height="340"></canvas>
-      <p class="chart-caption">Bangladesh Candle Market (2025)<br>
-        Utility Lighting, Home Décor & Gifting, Wellness & Events</p>
-      <p class="chart-desc">No dominant brand. Huge scope for creative, premium, mood-based candles for women.</p>
-    </section>
+      <!-- Slide 2: Market Analysis -->
+      <div class="slide" id="slide-2">
+        <div class="slide-content">
+          <h1>Market Opportunity</h1>
+          <div class="market-stats">
+            <div class="stat-box tam">
+              <h3>Online Market</h3>
+              <div class="stat-number">৳2.6B</div>
+              <p>Bangladesh Candle Market</p>
+            </div>
+            <div class="stat-box sam">
+              <h3>Target Segment</h3>
+              <div class="stat-number">৳650M</div>
+              <p>Premium & Gifting (25%)</p>
+            </div>
+            <div class="stat-box som">
+              <h3>Our Goal</h3>
+              <div class="stat-number">৳65M</div>
+              <p>10% Market Share (5 years)</p>
+            </div>
+          </div>
+          <div class="online-trends">
+            <h3>Online Sales Growth:</h3>
+            <ul>
+              <li><strong>Facebook Commerce:</strong> ৳45B+ sales annually in BD</li>
+              <li><strong>Daraz:</strong> 35% YoY growth in home & lifestyle</li>
+              <li><strong>Instagram Shopping:</strong> 250% growth in 2024</li>
+              <li><strong>Direct Website:</strong> Higher margins, better control</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <section>
-      <h2 class="sec-title">Financials & Margin</h2>
-      <ul>
-        <li>Sample cost: 40–50৳/candle (premium materials)</li>
-        <li>Bulk: 20–25৳/candle (local packaging)</li>
-        <li>Retail price: 80–150৳, high margin, premium positioning</li>
-      </ul>
-    </section>
+      <!-- Slide 3: Product Line & Pricing -->
+      <div class="slide" id="slide-3">
+        <div class="slide-content">
+          <h1>Product Portfolio</h1>
+          <div class="product-grid">
+            <div class="product-category">
+              <h3>Basic Range (70% of sales)</h3>
+              <ul>
+                <li>Small taper candles: ৳80-120</li>
+                <li>Medium pillars: ৳150-200</li>
+                <li>Scented jars: ৳180-250</li>
+              </ul>
+              <p><strong>Target:</strong> Facebook, Instagram buyers</p>
+            </div>
+            <div class="product-category">
+              <h3>Premium Range (25% of sales)</h3>
+              <ul>
+                <li>Luxury collections: ৳300-500</li>
+                <li>Gift sets: ৳450-750</li>
+                <li>Custom orders: ৳400-800</li>
+              </ul>
+              <p><strong>Target:</strong> Website, Daraz premium</p>
+            </div>
+            <div class="product-category">
+              <h3>Festival Editions (5% of sales)</h3>
+              <ul>
+                <li>Eid specials: ৳200-400</li>
+                <li>Puja collections: ৳250-500</li>
+                <li>Wedding favors: ৳50-150/piece</li>
+              </ul>
+              <p><strong>Target:</strong> Seasonal campaigns</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <section>
-      <h2 class="sec-title">Go-To-Market</h2>
-      <ul>
-        <li>D2C digital launch: Instagram, Facebook, TikTok</li>
-        <li>Boutique shops: Gulshan, Banani</li>
-        <li>B2B: Events, planners, hotels, spas</li>
-        <li>Influencer partnerships, festival editions</li>
-      </ul>
-    </section>
-    
-    <div class="call-to-action">
-      <b>Be part of Bangladesh’s first celebration brand for women.<br>
-        Strategic investor & creative partner wanted!</b>
+      <!-- Slide 4: Manufacturing Process -->
+      <div class="slide" id="slide-4">
+        <div class="slide-content">
+          <h1>Manufacturing & Cost Structure</h1>
+          <div class="manufacturing-process">
+            <div class="process-step">
+              <h3>Raw Materials</h3>
+              <ul>
+                <li>Soy wax: ৳380/kg</li>
+                <li>Stearic acid: ৳250/250ml</li>
+                <li>Colors: ৳120/250ml</li>
+                <li>Fragrance: ৳10-30/ml</li>
+                <li>Wicks: ৳0.50/piece</li>
+              </ul>
+            </div>
+            <div class="process-step">
+              <h3>Production Cost (per candle)</h3>
+              <ul>
+                <li>Materials: ৳25-35</li>
+                <li>Labor: ৳5-8</li>
+                <li>Packaging: ৳10-15</li>
+                <li>Shipping: ৳15-25</li>
+                <li><strong>Total: ৳55-83</strong></li>
+              </ul>
+            </div>
+            <div class="process-step">
+              <h3>Monthly Capacity</h3>
+              <ul>
+                <li>Phase 1: 500 candles/month</li>
+                <li>Phase 2: 2,000 candles/month</li>
+                <li>Phase 3: 5,000 candles/month</li>
+                <li>Automation: 10,000+/month</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Online Sales Strategy -->
+      <div class="slide" id="slide-5">
+        <div class="slide-content">
+          <h1>Online Sales Channels</h1>
+          <div class="sales-channels">
+            <div class="channel-item">
+              <h3>🔵 Facebook & Instagram (50%)</h3>
+              <ul>
+                <li>Facebook Shop setup</li>
+                <li>Instagram Shopping tags</li>
+                <li>WhatsApp Business integration</li>
+                <li>Influencer partnerships</li>
+                <li>Facebook/Instagram ads: ৳15,000/month</li>
+              </ul>
+              <p><strong>Expected:</strong> ৳8-12L monthly revenue</p>
+            </div>
+            <div class="channel-item">
+              <h3>🛒 Daraz & E-commerce (30%)</h3>
+              <ul>
+                <li>Daraz seller account</li>
+                <li>Bikroy premium listings</li>
+                <li>Chaldal lifestyle section</li>
+                <li>Commission: 2-8%</li>
+              </ul>
+              <p><strong>Expected:</strong> ৳5-8L monthly revenue</p>
+            </div>
+            <div class="channel-item">
+              <h3>🌐 Own Website (20%)</h3>
+              <ul>
+                <li>Shopify/WooCommerce store</li>
+                <li>Google Ads & SEO</li>
+                <li>Email marketing</li>
+                <li>Higher margins (no commission)</li>
+              </ul>
+              <p><strong>Expected:</strong> ৳3-5L monthly revenue</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 6: Marketing Strategy -->
+      <div class="slide" id="slide-6">
+        <div class="slide-content">
+          <h1>Digital Marketing Plan</h1>
+          <div class="marketing-strategy">
+            <div class="marketing-phase">
+              <h3>Phase 1: Launch (Months 1-6)</h3>
+              <ul>
+                <li>Facebook/Instagram page setup</li>
+                <li>Content creation: ৳8,000/month</li>
+                <li>Paid ads: ৳15,000/month</li>
+                <li>Influencer collaborations: ৳5,000/month</li>
+                <li>Target: 1,000+ followers, 200 sales/month</li>
+              </ul>
+            </div>
+            <div class="marketing-phase">
+              <h3>Phase 2: Scale (Months 7-18)</h3>
+              <ul>
+                <li>Facebook/Instagram ads scaling</li>
+                <li>Google Ads: ৳10,000/month</li>
+                <li>Email marketing setup</li>
+                <li>Customer retention campaigns</li>
+                <li>Target: 5,000+ followers, 800 sales/month</li>
+              </ul>
+            </div>
+            <div class="marketing-phase">
+              <h3>Phase 3: Optimize (Months 18+)</h3>
+              <ul>
+                <li>Marketing automation</li>
+                <li>Retargeting campaigns</li>
+                <li>Referral programs</li>
+                <li>Brand partnerships</li>
+                <li>Target: 15,000+ followers, 2,000 sales/month</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 7: Financial Projections -->
+      <div class="slide" id="slide-7">
+        <div class="slide-content">
+          <h1>Financial Projections</h1>
+          <div class="financials-container">
+            <canvas id="revenueChart" width="600" height="300"></canvas>
+            <div class="financial-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Metrics</th>
+                    <th>Month 6</th>
+                    <th>Year 1</th>
+                    <th>Year 2</th>
+                    <th>Year 3</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Monthly Revenue</td>
+                    <td>৳2.5L</td>
+                    <td>৳8.5L</td>
+                    <td>৳18.2L</td>
+                    <td>৳35.8L</td>
+                  </tr>
+                  <tr>
+                    <td>Monthly Orders</td>
+                    <td>200</td>
+                    <td>650</td>
+                    <td>1,400</td>
+                    <td>2,750</td>
+                  </tr>
+                  <tr>
+                    <td>Average Order Value</td>
+                    <td>৳125</td>
+                    <td>৳130</td>
+                    <td>৳130</td>
+                    <td>৳130</td>
+                  </tr>
+                  <tr>
+                    <td>Gross Margin %</td>
+                    <td>55%</td>
+                    <td>62%</td>
+                    <td>68%</td>
+                    <td>72%</td>
+                  </tr>
+                  <tr>
+                    <td>Monthly Profit</td>
+                    <td>-৳25K</td>
+                    <td>৳85K</td>
+                    <td>৳4.2L</td>
+                    <td>৳12.1L</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 8: Operations Plan -->
+      <div class="slide" id="slide-8">
+        <div class="slide-content">
+          <h1>Operations & Logistics</h1>
+          <div class="operations-grid">
+            <div class="ops-section">
+              <h3>Production Setup</h3>
+              <ul>
+                <li>Home-based initially (৳15K setup)</li>
+                <li>Small factory after 6 months (৳2L)</li>
+                <li>Equipment: melters, molds, packaging</li>
+                <li>Quality control systems</li>
+                <li>Inventory management</li>
+              </ul>
+            </div>
+            <div class="ops-section">
+              <h3>Supply Chain</h3>
+              <ul>
+                <li>Raw materials: 3 supplier partnerships</li>
+                <li>Molds: Import from China (bulk orders)</li>
+                <li>Packaging: Local suppliers</li>
+                <li>15-day inventory buffer</li>
+                <li>Seasonal stock planning</li>
+              </ul>
+            </div>
+            <div class="ops-section">
+              <h3>Fulfillment</h3>
+              <ul>
+                <li>Pathao/Steadfast courier partnership</li>
+                <li>2-3 day delivery (Dhaka)</li>
+                <li>4-7 day delivery (outside Dhaka)</li>
+                <li>Shipping: ৳60-120 per order</li>
+                <li>Return policy: 7-day guarantee</li>
+              </ul>
+            </div>
+            <div class="ops-section">
+              <h3>Customer Service</h3>
+              <ul>
+                <li>WhatsApp Business integration</li>
+                <li>Facebook Messenger automation</li>
+                <li>Email support system</li>
+                <li>Order tracking system</li>
+                <li>Customer feedback collection</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 9: Investment Breakdown -->
+      <div class="slide" id="slide-9">
+        <div class="slide-content">
+          <h1>Investment & Use of Funds</h1>
+          <div class="investment-breakdown">
+            <div class="investment-summary">
+              <h2>৳25 Lakhs Investment Required</h2>
+              <p>18-month operational runway</p>
+            </div>
+            <div class="funds-allocation">
+              <canvas id="fundsChart" width="400" height="400"></canvas>
+              <div class="funds-details">
+                <div class="fund-item">
+                  <h4>Inventory & Materials (40% - ৳10L)</h4>
+                  <ul>
+                    <li>Raw materials stock: ৳6L</li>
+                    <li>Packaging materials: ৳2L</li>
+                    <li>Molds & equipment: ৳2L</li>
+                  </ul>
+                </div>
+                <div class="fund-item">
+                  <h4>Marketing & Ads (30% - ৳7.5L)</h4>
+                  <ul>
+                    <li>Facebook/Instagram ads: ৳4L</li>
+                    <li>Google Ads: ৳1.5L</li>
+                    <li>Content creation: ৳1L</li>
+                    <li>Influencer partnerships: ৳1L</li>
+                  </ul>
+                </div>
+                <div class="fund-item">
+                  <h4>Operations (20% - ৳5L)</h4>
+                  <ul>
+                    <li>Factory setup: ৳2L</li>
+                    <li>Website development: ৳1L</li>
+                    <li>Tools & software: ৳1L</li>
+                    <li>Initial team salary: ৳1L</li>
+                  </ul>
+                </div>
+                <div class="fund-item">
+                  <h4>Working Capital (10% - ৳2.5L)</h4>
+                  <ul>
+                    <li>Emergency fund</li>
+                    <li>Courier & shipping</li>
+                    <li>Miscellaneous expenses</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 10: Risk Analysis -->
+      <div class="slide" id="slide-10">
+        <div class="slide-content">
+          <h1>Risk Assessment</h1>
+          <div class="risks-grid">
+            <div class="risk-item">
+              <h3>⚠️ Market Risk</h3>
+              <p><strong>Risk:</strong> High competition from Facebook sellers</p>
+              <p><strong>Mitigation:</strong> Brand differentiation, premium quality, better customer service</p>
+            </div>
+            <div class="risk-item">
+              <h3>🚚 Logistics Risk</h3>
+              <p><strong>Risk:</strong> Delivery delays, broken products</p>
+              <p><strong>Mitigation:</strong> Multiple courier partners, secure packaging, insurance</p>
+            </div>
+            <div class="risk-item">
+              <h3>📱 Platform Risk</h3>
+              <p><strong>Risk:</strong> Facebook/Instagram policy changes</p>
+              <p><strong>Mitigation:</strong> Diversified channels, own website, email list building</p>
+            </div>
+            <div class="risk-item">
+              <h3>💰 Cash Flow Risk</h3>
+              <p><strong>Risk:</strong> Seasonal sales fluctuations</p>
+              <p><strong>Mitigation:</strong> Festival collections, subscription model, working capital buffer</p>
+            </div>
+            <div class="risk-item">
+              <h3>🏭 Supply Risk</h3>
+              <p><strong>Risk:</strong> Raw material price increases</p>
+              <p><strong>Mitigation:</strong> Multiple suppliers, bulk purchasing, price adjustment strategy</p>
+            </div>
+            <div class="risk-item">
+              <h3>👥 Customer Risk</h3>
+              <p><strong>Risk:</strong> Customer acquisition cost increases</p>
+              <p><strong>Mitigation:</strong> Organic growth, referral programs, customer retention</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 11: 18-Month Milestones -->
+      <div class="slide" id="slide-11">
+        <div class="slide-content">
+          <h1>Growth Milestones</h1>
+          <div class="milestones-timeline">
+            <div class="milestone-quarter">
+              <h3>Months 1-3</h3>
+              <ul>
+                <li>Setup production facility</li>
+                <li>Launch Facebook/Instagram pages</li>
+                <li>First 100 orders</li>
+                <li>Build supplier relationships</li>
+                <li>Revenue: ৳50K-150K/month</li>
+              </ul>
+            </div>
+            <div class="milestone-quarter">
+              <h3>Months 4-6</h3>
+              <ul>
+                <li>Launch Daraz store</li>
+                <li>Scale to 200+ orders/month</li>
+                <li>First influencer partnerships</li>
+                <li>Website launch</li>
+                <li>Revenue: ৳200K-250K/month</li>
+              </ul>
+            </div>
+            <div class="milestone-quarter">
+              <h3>Months 7-12</h3>
+              <ul>
+                <li>Festival collections launch</li>
+                <li>Scale marketing campaigns</li>
+                <li>500+ orders/month</li>
+                <li>Customer retention programs</li>
+                <li>Revenue: ৳400K-850K/month</li>
+              </ul>
+            </div>
+            <div class="milestone-quarter">
+              <h3>Months 13-18</h3>
+              <ul>
+                <li>Automation implementation</li>
+                <li>1000+ orders/month</li>
+                <li>Team expansion</li>
+                <li>Series A preparation</li>
+                <li>Revenue: ৳1M-1.8M/month</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 12: Expected Returns -->
+      <div class="slide" id="slide-12">
+        <div class="slide-content closing-slide">
+          <h1>Investment Summary</h1>
+          <div class="returns-summary">
+            <div class="investment-box">
+              <h2>৳25 Lakhs Investment</h2>
+              <p>18-month runway to profitability</p>
+            </div>
+            <div class="projection-grid">
+              <div class="projection-item">
+                <h3>Year 1 Target</h3>
+                <ul>
+                  <li>৳1.02 Crores revenue</li>
+                  <li>8,000+ orders</li>
+                  <li>Break-even by month 12</li>
+                </ul>
+              </div>
+              <div class="projection-item">
+                <h3>Year 2 Target</h3>
+                <ul>
+                  <li>৳2.18 Crores revenue</li>
+                  <li>17,000+ orders</li>
+                  <li>25%+ profit margins</li>
+                </ul>
+              </div>
+              <div class="projection-item">
+                <h3>Year 3 Target</h3>
+                <ul>
+                  <li>৳4.30 Crores revenue</li>
+                  <li>33,000+ orders</li>
+                  <li>Market leader position</li>
+                </ul>
+              </div>
+            </div>
+            <div class="action-steps">
+              <h3>Next Steps:</h3>
+              <ol>
+                <li>Finalize investment terms</li>
+                <li>Setup production facility</li>
+                <li>Begin Facebook/Instagram marketing</li>
+                <li>Launch first product line</li>
+                <li>Scale operations based on demand</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
